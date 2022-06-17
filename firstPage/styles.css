@@ -1,0 +1,164 @@
+@font-face { font-family: CooperHewitt; src: url('../fonts/CooperHewitt-Book.otf'); } 
+@font-face { font-family: CooperHewitt; font-weight: bold; src: url('../fonts/CooperHewitt-Medium.otf');}
+
+:root {
+    --sec-color: #0c72c1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: CooperHewitt, sans-serif;
+}
+
+body{ 
+    background-image: url(../imgs/road-1000x667.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #eee;
+
+    min-width: 820px;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dateTime{
+    align-self: flex-end;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    color: white;
+    background-color: var(--sec-color);
+
+    margin: 20px;
+    padding: 10px 20px;
+
+    font-size: 2.3vw;
+    border-radius: 10px;
+    width: 25vw;
+}
+
+#logo::before {    
+    content: "";
+    background-image: url('../imgs/mapLogo.png');
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#logo{
+    position: relative;
+    height: 50%;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+#compass-logo-img{
+    height: 50%;
+    width: auto;
+}
+
+#logo-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 10rem;
+}
+
+#logo-text span{
+    margin-bottom: -20px;
+}
+
+#gps-text-logo{
+    color: var(--sec-color);
+    
+}
+
+#te-guia-text-logo{
+    font-size: 5rem;
+    align-self: flex-end;
+}
+
+footer{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#gps-san-martin-footer{
+    font-size: 4.5vw;
+    color: black;
+    padding: 20px 80px;
+}
+
+#contact-info{
+    color: var(--sec-color);
+    font-size: 2vw;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#button-empezar{
+    color:black;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 3vw;
+    padding: 5px 15px 8px 15px;
+    /*margin-top: 50px;*/
+}
+
+#button-empezar:hover{
+    color:white;
+    background-color: var(--sec-color);
+}
+
+@media (max-width: 820px)
+{
+    #dateTime{
+        font-size: 1.9rem;
+        width: 205px;
+    }
+
+    #gps-san-martin-footer{
+        font-size: 3.6rem;
+    }
+
+    #contact-info{
+        font-size: 1.6rem;
+    }
+
+    #button-empezar{
+        font-size: 2.5rem;
+    }
+}
